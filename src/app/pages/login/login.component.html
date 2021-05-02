@@ -1,0 +1,33 @@
+<nz-layout class="container">
+  <nz-layout>
+    <nz-content>
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item class="title">
+          <img src="../../../assets/icon.png" alt="">
+          <h3>Snap Home</h3>
+          <span>Seja Bem-Vindo!</span>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your email!">
+            <nz-input-group nzPrefixIcon="mail">
+              <input formControlName="email" nz-input placeholder="E-mail" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group nzPrefixIcon="lock">
+              <input formControlName="password" nz-input type="password" placeholder="Password" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <button nz-button nzType="primary" [disabled]="!validateForm.valid">Log in</button>
+          </nz-form-control>
+        </nz-form-item>
+      </form>
+    </nz-content>
+  </nz-layout>
+</nz-layout>
+
