@@ -24,6 +24,7 @@ import { NzInputModule  } from 'ng-zorro-antd/input';
 
 import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
 import { UserIndexComponent } from './components/user/index/index.component';
+import { UserCreateComponent } from './components/user/create/create.component';
 
 registerLocaleData(en);
 
@@ -32,7 +33,8 @@ registerLocaleData(en);
     AppComponent,
     LoginComponent,
     ContentComponent,
-    UserIndexComponent
+    UserIndexComponent,
+    UserCreateComponent
   ],
   imports: [
     BrowserModule,

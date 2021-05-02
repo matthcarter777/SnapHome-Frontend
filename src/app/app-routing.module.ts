@@ -1,3 +1,4 @@
+import { UserCreateComponent } from './components/user/create/create.component';
 import { UserIndexComponent } from './components/user/index/index.component';
 import { ContentComponent } from './components/shared/layout/content/content.component';
 import { NgModule } from '@angular/core';
@@ -11,7 +12,8 @@ const routes: Routes = [
     component: ContentComponent,
     canActivate: [AuthGuard],
     children: [
-      { path: "users", component: UserIndexComponent }
+      { path: "users", component: UserIndexComponent },
+      { path: "users/create", component: UserCreateComponent },
     ]
   },
   { path: 'login', component: LoginComponent }

@@ -18,4 +18,8 @@ export class UserService {
   index(): Observable<User[]> {
     return this.http.get<User[]>(this.basUrl);
   }
+
+  create(user: User): Observable<User> {
+    return this.http.post<User>(this.basUrl, user);
+  }
 }
