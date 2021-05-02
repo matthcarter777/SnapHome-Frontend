@@ -1,3 +1,4 @@
+import { UserIndexComponent } from './components/user/index/index.component';
 import { ContentComponent } from './components/shared/layout/content/content.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -9,6 +10,9 @@ const routes: Routes = [
   { path: '',  
     component: ContentComponent,
     canActivate: [AuthGuard],
+    children: [
+      { path: "users", component: UserIndexComponent }
+    ]
   },
   { path: 'login', component: LoginComponent }
 ];

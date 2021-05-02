@@ -1,3 +1,4 @@
+import { TokenInterceptor } from './interceptors/token.interceptor';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,7 +12,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -22,6 +23,7 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule  } from 'ng-zorro-antd/input';
 
 import { DemoNgZorroAntdModule } from './ng-zorro-antd.module';
+import { UserIndexComponent } from './components/user/index/index.component';
 
 registerLocaleData(en);
 
@@ -29,7 +31,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     LoginComponent,
-    ContentComponent
+    ContentComponent,
+    UserIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ registerLocaleData(en);
   ],
   providers: [
     AuthGuard,
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
     { provide: NZ_I18N, useValue: en_US }
   ],
   bootstrap: [AppComponent]

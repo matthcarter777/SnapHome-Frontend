@@ -1,0 +1,27 @@
+<nz-content>
+  <div class="content">
+    <nz-table #basicTable [nzData]="users">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.name }}</td>
+          <td>{{ data.email }}</td>
+          <td class="actions">
+            <a>
+              <i nz-icon nzType="edit" nzTheme="outline"></i>
+            </a>
+            <a>
+              <i nz-icon nzType="delete" nzTheme="outline"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</nz-content>
