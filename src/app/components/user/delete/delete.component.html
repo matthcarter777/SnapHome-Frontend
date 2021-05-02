@@ -1,0 +1,19 @@
+<nz-content>
+  <div class="content">
+    <form nz-form>
+      <nz-form-item>
+        <h1 class="title">Remover novo Usuario</h1>
+      </nz-form-item>
+      <nz-form-item>
+        <span>{{ user.name }}</span>
+      </nz-form-item>
+      <nz-form-item>
+        <span>{{ user.email }}</span>
+      </nz-form-item>
+      <nz-form-item nz-row class="register-area">
+        <button nz-button nzType="primary" (click)="create()" nzDanger>Deletar</button>
+        <button nz-button nzType="primary" (click)="cancel()">Cancelar</button>
+      </nz-form-item>
+    </form>
+  </div>
+</nz-content>

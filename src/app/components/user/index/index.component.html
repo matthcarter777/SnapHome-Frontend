@@ -4,6 +4,7 @@
     <nz-table #basicTable [nzData]="users">
       <thead>
         <tr>
+          <th>Id</th>
           <th>Nome</th>
           <th>Email</th>
           <th>Ações</th>
@@ -11,13 +12,14 @@
       </thead>
       <tbody>
         <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.id }}</td>
           <td>{{ data.name }}</td>
           <td>{{ data.email }}</td>
           <td class="actions">
             <a>
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </a>
-            <a>
+            <a routerLink="/users/delete/{{ data.id }}">
               <i nz-icon nzType="delete" nzTheme="outline"></i>
             </a>
           </td>

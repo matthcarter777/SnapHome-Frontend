@@ -1,15 +1,8 @@
-import { UserService } from './../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
+import { UserService } from './../../../services/user.service';
 import { User } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
-
-interface Person {
-  key: string;
-  name: string;
-  age: number;
-  address: string;
-}
 
 
 @Component({
@@ -23,7 +16,7 @@ export class UserIndexComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
   ) { }
 
   ngOnInit(): void {
@@ -35,5 +28,4 @@ export class UserIndexComponent implements OnInit {
   navigateToNewUser(): void {
     this.router.navigate(['users/create'])
   }
-
 }

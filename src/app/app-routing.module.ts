@@ -1,3 +1,4 @@
+import { UserDeleteComponent } from './components/user/delete/delete.component';
 import { UserCreateComponent } from './components/user/create/create.component';
 import { UserIndexComponent } from './components/user/index/index.component';
 import { ContentComponent } from './components/shared/layout/content/content.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
     children: [
       { path: "users", component: UserIndexComponent },
       { path: "users/create", component: UserCreateComponent },
+      { path: "users/delete/:id", component: UserDeleteComponent },
     ]
   },
   { path: 'login', component: LoginComponent }

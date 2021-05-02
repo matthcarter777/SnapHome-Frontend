@@ -22,4 +22,14 @@ export class UserService {
   create(user: User): Observable<User> {
     return this.http.post<User>(this.basUrl, user);
   }
+
+  delete(id: string): Observable<User> {
+    const url  = `${this.basUrl}/${id}`
+    return this.http.delete<User>(url);
+  }
+
+  show(id: string): Observable<User> {
+    const url  = `${this.basUrl}/${id}`
+    return this.http.get<User>(url)
+  }
 }

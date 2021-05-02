@@ -1,0 +1,30 @@
+[nz-form] {
+  max-width: 600px;
+}
+
+.phone-select {
+  width: 70px;
+}
+
+.register-are {
+  margin-bottom: 8px;
+}
+
+.content {
+  height: 100%;
+  width: 50rem;
+
+  padding: 24px;
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin-left: 1rem;
+}
+
+span {
+  font-size: 1rem;
+}
