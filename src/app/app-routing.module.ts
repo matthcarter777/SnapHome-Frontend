@@ -17,6 +17,8 @@ import { PropertyCreateComponent } from './components/property/create/create.com
 import { PropertyDeleteComponent } from './components/property/delete/delete.component';
 import { PropertyUpdateComponent } from './components/property/update/update.component';
 
+import { LayoutComponent } from './pages/public/layout/layout.component';
+
 const routes: Routes = [
   { path: '',  
     component: ContentComponent,
@@ -32,7 +34,8 @@ const routes: Routes = [
       { path: "propertys/delete/:id", component: PropertyDeleteComponent },
     ]
   },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'public', component: LayoutComponent },
 ];
 
 @NgModule({

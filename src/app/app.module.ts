@@ -33,6 +33,9 @@ import { PropertyIndexComponent } from './components/property/index/index.compon
 import { PropertyCreateComponent } from './components/property/create/create.component';
 import { PropertyDeleteComponent } from './components/property/delete/delete.component';
 import { PropertyUpdateComponent } from './components/property/update/update.component';
+import { AllPropertysComponent } from './pages/public/all-propertys/all-propertys.component';
+import { ShowPropertyComponent } from './pages/public/show-property/show-property.component';
+import { LayoutComponent } from './pages/public/layout/layout.component';
 
 registerLocaleData(en);
 
@@ -49,6 +52,9 @@ registerLocaleData(en);
     PropertyCreateComponent,
     PropertyDeleteComponent,
     PropertyUpdateComponent,
+    AllPropertysComponent,
+    ShowPropertyComponent,
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,

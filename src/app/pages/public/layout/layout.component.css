@@ -1,0 +1,59 @@
+:host {
+  text-align: center;
+}
+
+nz-header {
+  background: #7dbcea;
+  color: #fff;
+
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: bold;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.login {
+  color: #fff;
+}
+
+.login:hover {
+  color: #c3c3c3;
+}
+
+nz-footer {
+  background: #d4ecfa;
+  color: #fff;
+}
+
+nz-footer {
+  line-height: 1.5;
+}
+
+nz-sider {
+  background: #3ba0e9;
+  color: #fff;
+  line-height: 120px;
+}
+
+nz-content {
+  background: #fff;
+  min-height: 120px;
+  line-height: 120px;
+}
+
+nz-layout {
+  margin-bottom: 48px;
+}
+
+nz-layout:last-child {
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+}
