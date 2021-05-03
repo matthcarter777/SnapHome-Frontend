@@ -22,6 +22,6 @@ export class PropertyIndexComponent implements OnInit {
   }
 
   navigateToNewUser(): void {
-    this.router.navigate(['users/create'])
+    this.router.navigate(['propertys/create'])
   }
 }

@@ -44,10 +44,6 @@ export class UserCreateComponent implements OnInit {
     return {};
   };
 
-  getCaptcha(e: MouseEvent): void {
-    e.preventDefault();
-  }
-
   constructor(
     private fb: FormBuilder,
     private userService: UserService,

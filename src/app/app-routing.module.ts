@@ -9,7 +9,9 @@ import { UserDeleteComponent } from './components/user/delete/delete.component';
 import { UserCreateComponent } from './components/user/create/create.component';
 import { UserIndexComponent } from './components/user/index/index.component';
 import { UserUpdateComponent } from './components/user/update/update.component';
+
 import { PropertyIndexComponent } from './components/property/index/index.component';
+import { PropertyCreateComponent } from './components/property/create/create.component';
 
 const routes: Routes = [
   { path: '',  
@@ -21,6 +23,7 @@ const routes: Routes = [
       { path: "users/update/:id", component: UserUpdateComponent },
       { path: "users/delete/:id", component: UserDeleteComponent },
       { path: "propertys", component: PropertyIndexComponent },
+      { path: "propertys/create", component: PropertyCreateComponent },
     ]
   },
   { path: 'login', component: LoginComponent }
