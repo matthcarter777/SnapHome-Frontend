@@ -21,7 +21,7 @@ export class PropertyIndexComponent implements OnInit {
     this.propertyService.index().subscribe(propertys => this.propertys = propertys);
   }
 
-  navigateToNewUser(): void {
+  navigateToNewProperty(): void {
     this.router.navigate(['propertys/create'])
   }
 }

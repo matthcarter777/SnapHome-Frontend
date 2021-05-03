@@ -1,0 +1,52 @@
+<nz-content>
+  <div class="content">
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <nz-form-item>
+        <h1 class="title">Atualizar Propriedade</h1>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="title">Titulo</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Titulo não pode ser vazio!">
+          <input nz-input formControlName="title" id="title" [(ngModel)]="property.title" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="address">Endereço</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Endereço não pode ser vazio!">
+          <input nz-input formControlName="address" id="address" [(ngModel)]="property.address" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="city" nzRequired>Cidade</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Cidade não pode ser vazia!">
+          <input nz-input id="city" formControlName="city" [(ngModel)]="property.city"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="state" nzRequired>Estado</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Estado não pode ser vazia!">
+          <input nz-input id="state" formControlName="state" [(ngModel)]="property.state"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="price" nzRequired>Valor</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Estado não pode ser vazia!">
+          <input nz-input type="number" id="price" formControlName="price" [(ngModel)]="property.price"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="description" nzRequired>Descrição</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Descrição não pode ser vazia!">
+          <textarea id="description" formControlName="description" [(ngModel)]="property.description"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="14" [nzOffset]="6">
+          <button nz-button nzType="primary" (click)="update()">Salvar</button>
+          <button nz-button nzType="primary" nzDanger (click)="cancel()">Cancelar</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+</nz-content>
+

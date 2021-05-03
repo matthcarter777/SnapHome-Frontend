@@ -26,7 +26,7 @@ export class UserDeleteComponent implements OnInit {
     });
   }
 
-  create() {
+  delete() {
     this.userService.delete(this.user.id as string).subscribe(() =>{
       this.router.navigate(['/users'])
     })
