@@ -1,0 +1,32 @@
+<nz-content>
+  <button nz-button nzType="primary" (click)="navigateToNewUser()">Novo Usuario</button>
+  <div class="content">
+    <nz-table #basicTable [nzData]="propertys">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Cidade</th>
+          <th>Estado</th>
+          <th>Preço</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of basicTable.data">
+          <td>{{ data.title }}</td>
+          <td>{{ data.city }}</td>
+          <td>{{ data.estate }}</td>
+          <td>{{ data.price }}</td>
+          <td class="actions">
+            <a routerLink="/users/update/{{ data.id }}">
+              <i nz-icon nzType="edit" nzTheme="outline"></i>
+            </a>
+            <a routerLink="/users/delete/{{ data.id }}">
+              <i nz-icon nzType="delete" nzTheme="outline"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</nz-content>

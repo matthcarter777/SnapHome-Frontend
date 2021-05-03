@@ -29,6 +29,9 @@ import { UserCreateComponent } from './components/user/create/create.component';
 import { UserDeleteComponent } from './components/user/delete/delete.component';
 import { UserUpdateComponent } from './components/user/update/update.component';
 
+import { PropertyIndexComponent } from './components/property/index/index.component';
+import { CreateComponent } from './components/property/create/create.component';
+
 registerLocaleData(en);
 
 @NgModule({
@@ -40,6 +43,8 @@ registerLocaleData(en);
     UserCreateComponent,
     UserDeleteComponent,
     UserUpdateComponent,
+    PropertyIndexComponent,
+    CreateComponent,
   ],
   imports: [
     BrowserModule,

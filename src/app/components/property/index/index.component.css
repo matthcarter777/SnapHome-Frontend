@@ -1,0 +1,13 @@
+.content {
+  height: 100%;
+  width: 65rem;
+
+  padding: 24px;
+  background: #fff;
+}
+
+.actions {
+  display: flex;
+
+  gap: 1rem;
+}
