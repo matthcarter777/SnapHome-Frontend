@@ -35,6 +35,12 @@
         </nz-form-control>
       </nz-form-item>
       <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="description" nzRequired>Descrição</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Descrição não pode ser vazia!">
+          <textarea id="description" formControlName="description" [(ngModel)]="property.description"></textarea>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
         <nz-form-control [nzSpan]="14" [nzOffset]="6">
           <button nz-button nzType="primary" (click)="create()">Salvar</button>
           <button nz-button nzType="primary" nzDanger (click)="cancel()">Cancelar</button>
