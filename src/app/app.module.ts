@@ -31,6 +31,7 @@ import { UserUpdateComponent } from './components/user/update/update.component';
 
 import { PropertyIndexComponent } from './components/property/index/index.component';
 import { PropertyCreateComponent } from './components/property/create/create.component';
+import { PropertyDeleteComponent } from './components/property/delete/delete.component';
 
 registerLocaleData(en);
 
@@ -45,6 +46,7 @@ registerLocaleData(en);
     UserUpdateComponent,
     PropertyIndexComponent,
     PropertyCreateComponent,
+    PropertyDeleteComponent,
   ],
   imports: [
     BrowserModule,
