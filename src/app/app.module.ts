@@ -37,6 +37,8 @@ import { AllPropertysComponent } from './pages/public/all-propertys/all-property
 import { ShowPropertyComponent } from './pages/public/show-property/show-property.component';
 import { LayoutComponent } from './pages/public/layout/layout.component';
 
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+
 registerLocaleData(en);
 
 @NgModule({
@@ -68,7 +70,8 @@ registerLocaleData(en);
     ReactiveFormsModule,
     NzFormModule,
     NzInputModule,
-    DemoNgZorroAntdModule
+    DemoNgZorroAntdModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [
     AuthGuard,

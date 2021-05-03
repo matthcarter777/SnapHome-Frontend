@@ -35,7 +35,7 @@ const routes: Routes = [
     ]
   },
   { path: 'login', component: LoginComponent },
-  { path: 'public', component: LayoutComponent },
+  { path: 'public', component: LayoutComponent,},
 ];
 
 @NgModule({
