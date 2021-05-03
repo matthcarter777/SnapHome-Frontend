@@ -28,6 +28,11 @@ export class UserService {
     return this.http.delete<User>(url);
   }
 
+  update(user: User): Observable<User> {
+    const url  = `${this.basUrl}/${user.id}`
+    return this.http.put<User>(url, user);
+  }
+
   show(id: string): Observable<User> {
     const url  = `${this.basUrl}/${id}`
     return this.http.get<User>(url)

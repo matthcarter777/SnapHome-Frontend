@@ -1,0 +1,33 @@
+<nz-content>
+  <div class="content">
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+      <nz-form-item>
+        <h1 class="title">Atualizar Usuario</h1>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email">E-mail</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Deve ser um email valido!">
+          <input nz-input formControlName="email" id="email" [(ngModel)]="user.email" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="name">Nome</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Nome não pode ser vazio!">
+          <input nz-input formControlName="name" id="name" [(ngModel)]="user.name" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>Password</nz-form-label>
+        <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Senha não pode ser vazia!">
+          <input nz-input type="password" id="password" formControlName="password" [(ngModel)]="user.password"/>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item nz-row class="register-area">
+        <nz-form-control [nzSpan]="14" [nzOffset]="6">
+          <button nz-button nzType="primary" (click)="update()">Salvar</button>
+          <button nz-button nzType="primary" nzDanger (click)="cancel()">Cancelar</button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
+</nz-content>

@@ -16,7 +16,7 @@
           <td>{{ data.name }}</td>
           <td>{{ data.email }}</td>
           <td class="actions">
-            <a>
+            <a routerLink="/users/update/{{ data.id }}">
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </a>
             <a routerLink="/users/delete/{{ data.id }}">
