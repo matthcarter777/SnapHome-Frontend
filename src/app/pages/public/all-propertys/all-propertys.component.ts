@@ -9,14 +9,14 @@ import { PropertysService } from 'src/app/services/propertys.service';
 })
 export class AllPropertysComponent implements OnInit {
   loading = false;
-  propertys!: Property[];
+  properties!: Property[];
   
   constructor(
     private propertyService: PropertysService
   ) { }
 
   ngOnInit(): void {
-    this.propertyService.index().subscribe(propertys => this.propertys = propertys);
+    this.propertyService.index().subscribe(propertys => this.properties = propertys);
   }
 
 }

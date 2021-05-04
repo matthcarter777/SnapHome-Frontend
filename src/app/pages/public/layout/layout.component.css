@@ -3,7 +3,7 @@
 }
 
 nz-header {
-  background: #7dbcea;
+  background: #3ba0e9;
   color: #fff;
 
   display: flex;
@@ -25,7 +25,7 @@ nz-header {
 }
 
 nz-footer {
-  background: #d4ecfa;
+  background: #c3c3c3;
   color: #fff;
 }
 

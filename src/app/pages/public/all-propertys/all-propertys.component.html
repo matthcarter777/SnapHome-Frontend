@@ -1,20 +1,22 @@
 <div class="container">
-  <li *ngFor="let property of propertys">
-    <ul>
-      <div class="item">
-        <div> 
+      <div class="card-item" *ngFor="let property of properties">
+        <div class="card-header"> 
           <img class="homeImg" src="../../../../assets/home.jpeg" alt="casa">
         </div>
-        <div class="infoContainer"> 
-          <span class="titleItem">{{ property.title }}</span>
-          <span class="adrress" >
-            {{ property.address }}, <strong>{{ property.city }}</strong>, <strong>{{ property.state }}</strong>
-          </span>
-          <div class="more">
-            <span class="price">{{ property.price | mask: 'separator':'.' }} R$</span>
+        <div class="card-body"> 
+          <div class="card-detail">
+            <h2 class="titleItem">{{ property.title }}</h2>
+            <span>
+              {{ property.description }}
+            </span>
+            <span>
+              <i nz-icon nzType="tags" nzTheme="outline"></i>
+              {{ property.address }}, <strong>{{ property.city }}</strong>, <strong>{{ property.state }}</strong>
+            </span>
+          </div>
+          <div class="card-info">
+            R$ {{ property.price | mask: 'separator':'.' }}
           </div>
         </div>
       </div>
-    </ul>
-  </li>
 </div>

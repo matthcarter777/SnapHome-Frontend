@@ -8,22 +8,22 @@
           <span>Seja Bem-Vindo!</span>
         </nz-form-item>
         <nz-form-item>
-          <nz-form-control nzErrorTip="Inisira seu email!">
+          <nz-form-control nzErrorTip="Insira seu email!">
             <nz-input-group nzPrefixIcon="mail">
-              <input formControlName="email" nz-input [(ngModel)]="user.email" placeholder="E-mail" />
+              <input class="email" formControlName="email" nz-input [(ngModel)]="user.email" placeholder="E-mail" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
         <nz-form-item>
-          <nz-form-control nzErrorTip="Inisira sua senha!">
+          <nz-form-control nzErrorTip="Insira sua senha!">
             <nz-input-group nzPrefixIcon="lock">
-              <input formControlName="password" nz-input type="password" [(ngModel)]="user.password" placeholder="Password" />
+              <input class="password" formControlName="password" nz-input type="password" [(ngModel)]="user.password" placeholder="Password" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
         <nz-form-item>
           <nz-form-control>
-            <button nz-button nzType="primary" [disabled]="!validateForm.valid" (click)="login()" >Log in</button>
+            <button nz-button class="btn-submit" nzType="primary" [disabled]="!validateForm.valid" (click)="login()" >Log in</button>
           </nz-form-control>
         </nz-form-item>
       </form>

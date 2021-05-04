@@ -1,5 +1,5 @@
 <nz-content>
-  <button nz-button nzType="primary" (click)="navigateToNewProperty()">Nova Propriedade</button>
+  <button nz-button class="btn-create" nzType="primary" (click)="navigateToNewProperty()">Nova Propriedade</button>
   <div class="content">
     <nz-table #basicTable [nzData]="propertys">
       <thead>
@@ -19,7 +19,7 @@
           <td>{{ data.price }}</td>
           <td class="actions">
             <a routerLink="/propertys/update/{{ data.id }}">
-              <i nz-icon nzType="edit" nzTheme="outline"></i>
+              <i nz-icon class="btn-update" nzType="edit" nzTheme="outline"></i>
             </a>
             <a routerLink="/propertys/delete/{{ data.id }}">
               <i nz-icon nzType="delete" nzTheme="outline"></i>
